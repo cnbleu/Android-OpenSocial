@@ -1,0 +1,56 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.BUILD.compileSdkVersion
+    buildToolsVersion rootProject.ext.BUILD.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.BUILD.minSdkVersion
+        targetSdkVersion rootProject.ext.BUILD.targetSdkVersion
+        applicationId "com.cnbleu.social.sample"
+        versionCode 1
+        versionName "1.0"
+    }
+
+    // enable databinding
+    dataBinding {
+        enabled true
+    }
+
+    signingConfigs {
+        release {
+            storeFile file(RELEASE_STOREFILE)
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
+            storePassword RELEASE_STOREPASSWORD
+        }
+
+        debug {
+            storeFile file(DEBUG_STOREFILE)
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release_debug {
+            debuggable true
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+
+    compile project(':social_agent')
+}

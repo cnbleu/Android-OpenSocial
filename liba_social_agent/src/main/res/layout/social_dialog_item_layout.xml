@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.cnbleu.social.agent.ui.ViewModel" />
+    </data>
+
+    <!--
+    ~
+    ~ 
+    ~
+    -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="6dp">
+
+        <TextView
+            android:id="@+id/social_item_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/social_item_background"
+            android:clickable="true"
+            android:drawablePadding="6dp"
+            android:gravity="center_horizontal|bottom"
+            android:onClick="@{viewmodel.onClick}"
+            android:orientation="vertical"
+            android:textColor="@android:color/black"
+            android:textSize="16dp"
+            app:itemImage="@{viewmodel.itemImage}"
+            app:itemText="@{viewmodel.itemName}"
+            tools:text="微信" />
+
+    </FrameLayout>
+
+</layout>

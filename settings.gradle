@@ -1,0 +1,7 @@
+include ':app_sample'
+
+include ':social_core'
+project(':social_core').projectDir = new File('liba_social_core')
+
+include ':social_agent'
+project(':social_agent').projectDir = new File('liba_social_agent')

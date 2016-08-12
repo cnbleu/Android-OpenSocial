@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<platforms>
+    <!--
+    	说明：
+
+    	1、所有集成到您项目的平台都应该为其在表格中填写相对应的开发者信息，以新浪微博为例：
+    	    <weibo
+                id="1"
+                sort="1"
+                key="568898243"
+                secret="38a4f8204cc784f81f9f0daaf31e02e3"
+                url="http://www.mob.com"
+                enable="true" />
+    	其中的sort是此平台在分享列表中的位置，由开发者自行定义，可以是任何整型数字，数值越大
+    	越靠后key、secret和url是您在新浪微博上注册开发者信息和应用后得到的信息
+    	id是一个保留的识别符，整型，ShareSDK不使用此字段，供您在自己的项目中当作平台的识别符。
+    	enable字段表示此平台是否有效，布尔值，默认为true，如果enable为false，即便平台的jar包
+    	已经添加到应用中，平台实例依然不可获取。
+
+    	各个平台注册应用信息的地址如下：
+			新浪微博        http://open.weibo.com
+			腾讯微博        http://dev.t.qq.com
+			QQ空间          http://connect.qq.com/intro/login/
+			微信好友        http://open.weixin.qq.com
+			Facebook       https://developers.facebook.com
+			Twitter        https://dev.twitter.com
+			人人网          http://dev.renren.com
+			开心网          http://open.kaixin001.com
+			搜狐微博        http://open.t.sohu.com
+			网易微博        http://open.t.163.com
+			豆瓣           http://developers.douban.com
+
+			有道云笔记      http://note.youdao.com/open/developguide.html#app
+			印象笔记        https://dev.evernote.com/
+			Linkedin       https://developer.linkedin.com
+			FourSquare     https://developer.foursquare.com/
+			搜狐随身看      https://open.sohu.com/
+			Flickr         http://www.flickr.com/services/
+			Pinterest      http://developers.pinterest.com/
+			Tumblr         http://www.tumblr.com/developers
+			Dropbox        https://www.dropbox.com/developers
+			Instagram      http://instagram.com/developer#
+			VKontakte      http://vk.com/dev
+			易信好友        http://open.yixin.im/
+			明道	           http://open.mingdao.com/
+			Line           http://media.line.me/zh-hant/
+			Pocket         http://getpocket.com/developer/apps/new
+    -->
+
+    <!--新浪微博-->
+    <weibo
+        id="1"
+        sort="1"
+        key="key"
+        secret="secret"
+        url="http://url.com"
+        client="false"
+        enable="false" />
+
+    <!--腾讯QQ-->
+    <qq
+        id="2"
+        sort="2"
+        appid="appid"
+        key="key"
+        client="false"
+        enable="false" />
+
+    <!--腾讯QQ空间-->
+    <qzone
+        id="3"
+        sort="3"
+        appid="appid"
+        key="key"
+        client="false"
+        enable="false" />
+
+    <!--微信好友-->
+    <wechat
+        id="4"
+        sort="4"
+        appid="appid"
+        secret="secret"
+        bypassed="false"
+        enable="false" />
+
+    <!--微信朋友圈-->
+    <moments
+        id="5"
+        sort="5"
+        appid="appid"
+        secret="secret"
+        bypassed="false"
+        enable="false" />
+
+    <!--微信收藏-->
+    <favorite
+        id="6"
+        sort="6"
+        appid="appid"
+        secret="secret"
+        enable="true" />
+
+    <!--支付宝-->
+    <alipay
+        id="7"
+        sort="7"
+        appid="appid"
+        enable="false"/>
+
+    <!--facebook-->
+    <facebook
+        id="8"
+        sort="8"
+        ConsumerKey="ConsumerKey"
+        ConsumerSecret="ConsumerSecret"
+        url="http://url.com"
+        enable="false" />
+
+    <!--twitter-->
+    <twitter
+        id="9"
+        sort="9"
+        ConsumerKey="ConsumerKey"
+        ConsumerSecret="ConsumerSecret"
+        CallbackUrl="http://url.com"
+        enable="false" />
+
+    <!--邮件-->
+    <email
+        id="10"
+        sort="10"
+        enable="false" />
+
+    <!--短信-->
+    <message
+        id="11"
+        sort="11"
+        enable="false" />
+
+    <!--whatsapp-->
+    <whatsapp
+        id="12"
+        sort="12"
+        enable="false" />
+
+    <!--蓝牙-->
+    <bluetooth
+        id="13"
+        sort="13"
+        enable="false" />
+
+</platforms>

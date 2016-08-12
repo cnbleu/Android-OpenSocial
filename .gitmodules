@@ -1,0 +1,3 @@
+[submodule "dependencies"]
+	path = dependencies
+	url = http://gitlab.hollywant.com:8181/android/dependencies.git
